@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">MyPortfolio</div>
+            <nav>
+                <ul>
+                    <li><a href="#profile" class="active"><i class="fa-solid fa-user"></i> Profile</a></li>
+                    <li><a href="#about"><i class="fa-solid fa-file-alt"></i> About</a></li>
+                    <li><a href="#projects"><i class="fa-solid fa-briefcase"></i> Projects</a></li>
+                    <li><a href="#contact"><i class="fa-solid fa-envelope"></i> Contact</a></li>
+
+                    <li><button id="toggle-theme" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button></li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <section id="profile" class="section">
+                <h1>Hello, I'm <span>Jane Doe</span></h1>
+                <p>
+                    I am a passionate and detail-oriented web developer with a growing interest in creating user-friendly and visually appealing websites. Although I have a few months of hands-on experience, I continuously learn new technologies and best practices to improve my skills. I enjoy turning creative ideas into functional websites and am committed to building responsive, accessible, and modern web applications.
+                </p>
+                <a href="assets/resume.pdf" download class="btn">Download CV</a>
+            </section>
+
+            <section id="about" class="section">
+                <h2>About Me</h2>
+                <p>
+                    I' m a web developer with extensive experience for 4 months in web development. My expertise is to create and website design, many more...
+                </p></p>
+
+                <div class="about-details">
+                    <div class="education">
+                        <h3>Education</h3>
+                        <ul>
+                            <li><strong>Bachelor of Computer Science</strong>, XYZ University, 2020-2023</li>
+                            <li><strong>Certified Front-End Developer</strong>, ABC Institute, 2024</li>
+                        </ul>
+                    </div>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <ul>
+                            <li>HTML, CSS, JavaScript</li>
+                            <li>React, Vue.js</li>
+                            <li>Responsive Design, Accessibility</li>
+                            <li>Git</li>
+                        </ul>
+                    </div>
+                    <div class="experience">
+                        <h3>Experience</h3>
+                        <ul>
+
+                            <li><strong>Web Designer Intern</strong> - Company B (2024 - 2025)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section">
+                <h2>Projects</h2>
+                <div class="project-list">
+                    <div class="project-card">
+                        <h3>Portfolio Website</h3>
+                        <p>A responsive portfolio with light/dark theme toggle.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Blog Template</h3>
+                        <p>A minimal blog template built using HTML, CSS & JavaScript.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="section">
+                <h2>Contact Me</h2>
+                <form id="contact-form" novalidate>
+                    <label>
+                        Name:
+                        <input type="text" id="name" name="name" required />
+                    </label>
+                    <label>
+                        Email:
+                        <input type="email" id="email" name="email" required />
+                    </label>
+                    <label>
+                        Message:
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </label>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </section>
+
+            <!-- Scroll to Top Button -->
+            <button id="back-to-top" title="Scroll to Top">⬆</button>
+        </main>
+    </div>
+    <script src="../js/script.js"></script>
+</body>
+</html>
