@@ -1,4 +1,5 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+﻿// === Toggle dark/light theme ===
+document.addEventListener("DOMContentLoaded", () => {
     const toggleBtn = document.getElementById("toggle-theme");
     toggleBtn.addEventListener("click", () => {
         const currentTheme = document.documentElement.getAttribute("data-theme");
@@ -10,7 +11,7 @@
     });
 });
 
-
+// === Form validation with basic checks ===
 const form = document.getElementById("contact-form");
 
 form.addEventListener("submit", (e) => {
@@ -21,31 +22,31 @@ form.addEventListener("submit", (e) => {
     const message = form.message.value.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+    // Check if all fields are filled
     if (!name || !email || !message) {
         alert("Please fill out all fields.");
         return;
     }
 
+    // Check for valid email format
     if (!emailRegex.test(email)) {
         alert("Please enter a valid email address.");
         return;
     }
 
+    // Simulated success
     alert("✅ Thank you! Your message has been sent.");
     form.reset();
 });
 
-// Scroll to Top Button
+// === Show scroll-to-top button when scrolled down ===
 const topBtn = document.getElementById("back-to-top");
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
+    topBtn.style.display = window.scrollY > 300 ? "block" : "none";
 });
 
+// === Smooth scroll to top ===
 topBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
